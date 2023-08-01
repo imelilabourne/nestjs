@@ -1,5 +1,6 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
+import { TaskDto } from './dto/task.dto';
 
 @Controller()
 export class AppController {
@@ -11,10 +12,10 @@ export class AppController {
   }
 
   @Post("task")
-  createTask(@Body() createTask) {
+  createTask(@Body() createTask: TaskDto) {
     return {
       name: createTask.name,
-      age: 12
+      age: createTask.age
     }
   }
 }
