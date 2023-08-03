@@ -6,31 +6,31 @@ export class AppService {
   //   return 'Hello World!!!';
   // }
 
-  getTasks(): any[] {
+  getProducts(): any[] {
     return [
       {
-        "code": 3001404307,
-        "desc": "50pcs High Quality U Cups 12oz/16oz/22oz 95mm Plastic Cups Milktea Cups Coffee Cups",
-        "variationId": 73642928695,
-        "variant": "12oz (360ml),Cups Only",
-        "unitPrice": "160",
-        "category": "PLASTIC CUP"
+        "code": 3175005768,
+        "desc": "5pcs Round/Square Thick Mini Cake Board - Silver 6\"/5.5\"/4.5\"/4\" (RM Boxes)",
+        "variationId": 57120624759,
+        "variant": "Square 5s (Silver),4 inch",
+        "unitPrice": "40",
+        "category": "CAKE BOARD"
       },
       {
-        "code": 3001404307,
-        "desc": "50pcs High Quality U Cups 12oz/16oz/22oz 95mm Plastic Cups Milktea Cups Coffee Cups",
-        "variationId": 73642928696,
-        "variant": "16oz (500ml),Cups Only",
-        "unitPrice": "180",
-        "category": "PLASTIC CUP"
+        "code": 3262294211,
+        "desc": "Pastry Box 4½” x 9″ x 2″ Pre-Formed RM Boxes 20pcs/pack",
+        "variationId": 84238688906,
+        "variant": "Natural",
+        "unitPrice": "295",
+        "category": "PASTRY BOX"
       },
       {
-        "code": 3001404307,
-        "desc": "50pcs High Quality U Cups 12oz/16oz/22oz 95mm Plastic Cups Milktea Cups Coffee Cups",
-        "variationId": 73642928697,
-        "variant": "16oz (500ml),Cup + Dome Lids",
-        "unitPrice": "255",
-        "category": "PLASTIC CUP"
+        "code": 3246466043,
+        "desc": "120pcs ¾oz & 1oz Foil Cupcake Liner [RM Boxes]",
+        "variationId": 180716150689,
+        "variant": "Premium Orange,1oz",
+        "unitPrice": "135",
+        "category": "CUPCAKE LINER"
       },
       {
         "code": 3001404307,
@@ -38,38 +38,6 @@ export class AppService {
         "variationId": 73642928698,
         "variant": "22oz (700ml),Cups Only",
         "unitPrice": "205",
-        "category": "PLASTIC CUP"
-      },
-      {
-        "code": 3001404307,
-        "desc": "50pcs High Quality U Cups 12oz/16oz/22oz 95mm Plastic Cups Milktea Cups Coffee Cups",
-        "variationId": 73642928699,
-        "variant": "22oz (700ml),Cup + Flat Lids",
-        "unitPrice": "270",
-        "category": "PLASTIC CUP"
-      },
-      {
-        "code": 3001404307,
-        "desc": "50pcs High Quality U Cups 12oz/16oz/22oz 95mm Plastic Cups Milktea Cups Coffee Cups",
-        "variationId": 73642928700,
-        "variant": "12oz (360ml),Cup + Flat Lids",
-        "unitPrice": "225",
-        "category": "PLASTIC CUP"
-      },
-      {
-        "code": 3001404307,
-        "desc": "50pcs High Quality U Cups 12oz/16oz/22oz 95mm Plastic Cups Milktea Cups Coffee Cups",
-        "variationId": 192481786592,
-        "variant": "12oz (360ml),Cup + Strawless Lid",
-        "unitPrice": "250",
-        "category": "PLASTIC CUP"
-      },
-      {
-        "code": 3001404307,
-        "desc": "50pcs High Quality U Cups 12oz/16oz/22oz 95mm Plastic Cups Milktea Cups Coffee Cups",
-        "variationId": 192481786593,
-        "variant": "16oz (500ml),Cup + Strawless Lid",
-        "unitPrice": "270",
         "category": "PLASTIC CUP"
       },
       {

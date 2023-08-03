@@ -1,21 +1,22 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
-import { TaskDto } from './dto/task.dto';
+import { ProductDto } from './dto/product.dto';
 
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get("tasks")
+  @Get("products")
   getTasks() {
-    return this.appService.getTasks()
+    return this.appService.getProducts()
   }
 
-  @Post("task")
-  createTask(@Body() createTask: TaskDto) {
+  @Post("product")
+  addProduct(@Body() addProduct: ProductDto) {
     return {
-      name: createTask.name,
-      age: createTask.age
+      category: addProduct.category,
+      variant: addProduct.variant,
+      unitPrice: addProduct.unitPrice
     }
   }
 }
