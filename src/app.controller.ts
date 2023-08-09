@@ -13,10 +13,6 @@ export class AppController {
 
   @Post("product")
   addProduct(@Body() addProduct: ProductDto) {
-    return {
-      category: addProduct.category,
-      variant: addProduct.variant,
-      unitPrice: addProduct.unitPrice
-    }
+    return addProduct
   }
 }
