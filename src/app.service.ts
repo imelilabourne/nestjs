@@ -6,8 +6,7 @@ export class AppService {
   //   return 'Hello World!!!';
   // }
 
-  getProducts(): any[] {
-    return [
+  product = [
       {
         "code": 3175005768,
         "desc": "5pcs Round/Square Thick Mini Cake Board - Silver 6\"/5.5\"/4.5\"/4\" (RM Boxes)",
@@ -49,6 +48,12 @@ export class AppService {
         "category": "PLASTIC CUP"
       }
     ]
-    
+
+  getProducts(): any[] {
+    return this.product
+  }
+
+  addProduct(product): any[] {
+    return [...this.product, product]
   }
 }

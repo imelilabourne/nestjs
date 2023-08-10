@@ -13,6 +13,6 @@ export class AppController {
 
   @Post("product")
   addProduct(@Body() addProduct: ProductDto) {
-    return addProduct
+    return this.appService.addProduct(addProduct)
   }
 }
