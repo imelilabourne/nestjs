@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 import { ProductDto } from './dto/product.dto';
 
@@ -14,5 +14,10 @@ export class AppController {
   @Post("product")
   addProduct(@Body() addProduct: ProductDto) {
     return this.appService.addProduct(addProduct)
+  }
+
+  @Get(":variationId")
+  getOneProduct(@Param('variationId') id: string) {
+    return this.appService.getProducts().find(prod => prod.variationId == id)
   }
 }
