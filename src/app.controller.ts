@@ -16,12 +16,12 @@ export class AppController {
     return this.appService.addProduct(addProduct)
   }
 
-  @Get(":variationId")
+  @Get("product/:variationId")
   getOneProduct(@Param('variationId') id: string) {
     return this.appService.getProducts().find(prod => prod.variationId == id)
   }
 
-  @Delete(":variationId")
+  @Delete("product/:variationId")
   deleteOneProduct(@Param('variationId') id: string) {
     return this.appService.getProducts().filter(prod => prod.variationId != id)
   }
