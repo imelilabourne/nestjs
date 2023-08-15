@@ -53,7 +53,10 @@ export class AppService {
     return [...this.product, product]
   }
 
-  deleteProduct(id): any[] {
-    return this.product.filter(prod => prod.variationId != id)
+  deleteProduct(id): any {
+    return {
+      message: "Successfully Deleted",
+      list: this.product.filter(prod => prod.variationId != id)
+    }
   }
 }
