@@ -52,4 +52,8 @@ export class AppService {
   addProduct(product): any[] {
     return [...this.product, product]
   }
+
+  deleteProduct(id): any[] {
+    return this.product.filter(prod => prod.variationId != id)
+  }
 }

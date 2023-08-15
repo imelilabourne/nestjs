@@ -23,6 +23,6 @@ export class AppController {
 
   @Delete("product/:variationId")
   deleteOneProduct(@Param('variationId') id: string) {
-    return this.appService.getProducts().filter(prod => prod.variationId != id)
+    return this.appService.deleteProduct(id)
   }
 }
