@@ -1,4 +1,5 @@
-import { Controller, Get } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
+import { ProductDto } from 'src/dto/product.dto';
 import { ProductsService } from 'src/products/services/products/products.service';
 
 @Controller('products')
@@ -7,5 +8,10 @@ export class ProductsController {
   @Get()
   getProducts() {
     return this.productsService.getProducts()
+  }
+
+  @Post()
+  addProduct(@Body() createdProduct: ProductDto){
+    return this.productsService.addProduct(createdProduct)
   }
 }
