@@ -18,4 +18,8 @@ export class ProductsService {
 
         return this.productRepository.save(prod)
     }
+
+    deleteProduct(id: any){
+        return this.productRepository.delete({"variationId": id})
+    }
 }
