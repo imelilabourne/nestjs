@@ -20,6 +20,8 @@ export class ProductsService {
     }
 
     deleteProduct(id: any){
-        return this.productRepository.delete({"variationId": id})
+        this.productRepository.delete({"variationId": id}).then(() => {
+            return this.productRepository.find()
+        })
     }
 }
