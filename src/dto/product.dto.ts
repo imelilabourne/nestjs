@@ -1,6 +1,6 @@
 export class ProductDto {
     category: string; 
-    variant: number;
+    variant: string;
     unitPrice: number;
     variationId: number;
     desc: string;

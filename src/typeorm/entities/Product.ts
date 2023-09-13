@@ -10,7 +10,7 @@ export class Product {
     category: string
 
     @Column()
-    variant: number
+    variant: string
 
     @Column()
     unitPrice: number
