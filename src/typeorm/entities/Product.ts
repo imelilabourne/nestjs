@@ -18,6 +18,6 @@ export class Product {
     @Column()
     desc: string
 
-    @Column()
+    @Column({type: 'bigint'})
     code: number
 }
