@@ -15,6 +15,11 @@ export class ProductsController {
     return this.productsService.addProduct(createdProduct)
   }
 
+  @Post('/import')
+  importProducts(@Body() createdProduct: ProductDto[]){
+    return this.productsService.importProducts(createdProduct)
+  }
+
   @Delete('/:variationId')
   deleteProduct(@Param('variationId') id: number){
     return this.productsService.deleteProduct(id)

@@ -19,6 +19,12 @@ export class ProductsService {
         return this.productRepository.save(prod)
     }
 
+    importProducts(products: ProductDto[]){
+        const prods = this.productRepository.create(products)
+
+        return this.productRepository.save(prods)
+    }
+
     deleteProduct(id: any){
         this.productRepository.delete({"variationId": id}).then(() => {
             return this.productRepository.find()
