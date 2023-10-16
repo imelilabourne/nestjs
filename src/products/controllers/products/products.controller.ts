@@ -21,7 +21,7 @@ export class ProductsController {
   }
 
   @Delete('/:variationId')
-  deleteProduct(@Param('variationId') id: number){
-    return this.productsService.deleteProduct(id)
+  deleteProduct(@Param('variationId') ids: number[]){
+    return this.productsService.deleteProduct(ids)
   }
 }

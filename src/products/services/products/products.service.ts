@@ -25,8 +25,9 @@ export class ProductsService {
         return this.productRepository.save(prods)
     }
 
-    deleteProduct(id: any){
-        this.productRepository.delete({"variationId": id}).then(() => {
+    deleteProduct(ids: any){
+        const idArray = ids.split(',') //GET - {URL}/products/${id} (separated by comma if multiple ids)
+        this.productRepository.delete(idArray).then(() => {
             return this.productRepository.find()
         })
     }
