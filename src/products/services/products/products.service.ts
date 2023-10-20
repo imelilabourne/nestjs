@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import { FilterDto } from 'src/dto/filter.dto';
 import { ProductDto } from 'src/dto/product.dto';
 import { Product } from 'src/typeorm/entities/Product';
 import { Repository } from 'typeorm';
@@ -7,8 +8,14 @@ import { Repository } from 'typeorm';
 export class ProductsService {
     constructor(@InjectRepository(Product) private productRepository: Repository<Product>){}
 
-    getProducts(){
-        return this.productRepository.find()
+    async getProducts(filterDto: FilterDto){
+        let tasks = await this.productRepository.find()
+        const { search } = filterDto 
+        if (Object.keys(filterDto).length) {
+            if(search) tasks = tasks.filter(data => data.variationId.toString().includes(search) || data.category.toLowerCase().includes(search) || data.desc.toLowerCase().includes(search))
+        } 
+            
+        return tasks
     }
 
     addProduct(productDetails: ProductDto){

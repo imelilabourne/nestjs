@@ -8,12 +8,7 @@ export class ProductsController {
     constructor(private productsService: ProductsService){}
   @Get()
   async getProducts(@Query() filterDto: FilterDto) {
-    let tasks = await this.productsService.getProducts();
-    const { search } = filterDto 
-    if (Object.keys(filterDto).length) {
-      if(search) tasks = tasks.filter(data => data.variationId.toString().includes(search) || data.category.toLowerCase().includes(search) || data.desc.toLowerCase().includes(search))
-    } 
-    return tasks
+    return this.productsService.getProducts(filterDto);
   }
 
   @Post()
