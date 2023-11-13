@@ -9,7 +9,7 @@ import { Product } from './typeorm/entities/Product';
   imports: [ TypeOrmModule.forRoot({
     type: 'mysql',
     host: process.env.DB_HOST,
-    port: 3306,
+    port: +process.env.DB_PORT,
     username: process.env.DB_USERNAME,
     password: process.env.DB_PASS,
     database: 'nestjs_mysql',
