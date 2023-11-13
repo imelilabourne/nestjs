@@ -8,10 +8,10 @@ import { Product } from './typeorm/entities/Product';
 @Module({
   imports: [ TypeOrmModule.forRoot({
     type: 'mysql',
-    host: 'localhost',
+    host: process.env.DB_HOST,
     port: 3306,
-    username: 'root',
-    password: 'password',
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASS,
     database: 'nestjs_mysql',
     entities: [ Product ],
     synchronize: true
